@@ -26,10 +26,7 @@ const testimonials = [
 export default function Home() {
   return (
     <>
-      <section
-        id="home"
-        className="h-screen flex items-center justify-center bg-cover bg-center relative"
-      >
+      <section id="home" className="h-screen flex items-center justify-center bg-cover bg-center relative">
         {/* 🔹 Video Background */}
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
           <source src="src/assets/img/graduation.mp4" type="video/mp4" />
@@ -59,8 +56,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="py-24 bg-white">
-        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Portfolio</h2>
+      <section id="galeri" className="py-24 bg-white">
+        <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Galeri</h2>
         <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
           {photos.map((src, i) => (
             <motion.img
