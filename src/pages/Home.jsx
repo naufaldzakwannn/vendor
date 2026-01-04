@@ -9,6 +9,7 @@ import photo5 from "../assets/img/img6.jpg";
 import photo6 from "../assets/img/img1.jpg";
 import photo7 from "../assets/img/img7.jpg";
 import photo8 from "../assets/img/img8.jpg";
+import videoBg from "../assets/img/graduation.mp4";
 
 /* =====================
    ANIMATION VARIANTS
@@ -55,7 +56,7 @@ export default function Home() {
       {/* ================= HERO ================= */}
       <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <video autoPlay loop muted playsInline className="absolute inset-0 w-full h-full object-cover">
-          <source src="/src/assets/img/graduation.mp4" type="video/mp4" />
+          <source src={videoBg} type="video/mp4" />
         </video>
 
         <div className="absolute inset-0 bg-black/60" />
