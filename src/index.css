@@ -9,3 +9,7 @@ body {
   background-color: white;
   color: #1f2937; /* text-gray-800 */
 }
+
+.heading {
+  font-family: "Cormorant Garamond", serif;
+}
