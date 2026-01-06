@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Camera, Video, Users } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 import photo1 from "../assets/img/img2.jpg";
 import photo2 from "../assets/img/img3.jpg";
@@ -134,12 +135,23 @@ export default function Home() {
             <p className="text-gray-600 max-w-xl mx-auto mb-10">Percayakan momen spesialmu kepada tim profesional kami</p>
 
             <motion.a
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.96 }}
-              href="https://wa.me/6281234567890"
-              className="inline-flex items-center gap-3 bg-gray-900 text-white px-10 py-4 rounded-full font-medium shadow-lg hover:bg-gray-800 transition"
+              whileHover={{ scale: 1.06 }}
+              whileTap={{ scale: 0.95 }}
+              href="https://wa.me/628567357138"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex items-center gap-3
+                bg-gradient-to-r from-green-500 to-emerald-600
+                text-white px-10 py-4 rounded-full
+                font-semibold tracking-wide
+                shadow-lg shadow-green-500/30
+                hover:shadow-green-600/40
+                transition
+              "
             >
-              Chat via WhatsApp →
+              <FaWhatsapp className="w-6 h-6" />
+              <span>Chat via WhatsApp</span>
             </motion.a>
           </div>
         </motion.div>

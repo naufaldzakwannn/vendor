@@ -1,4 +1,5 @@
-import { Facebook, Instagram, Mail, Phone } from "lucide-react";
+import { Instagram, Mail, Phone } from "lucide-react";
+import { FaInstagram, FaMailBulk, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -17,11 +18,11 @@ export default function Footer() {
             <h3 className="font-medium text-gray-900">Kontak</h3>
             <div className="space-y-2 text-sm text-gray-600">
               <p className="flex items-center justify-center md:justify-start gap-2">
-                <Phone className="w-4 h-4" /> +62 812-3456-7890
+                <Phone className="w-4 h-4" /> +62 856-7357-138
               </p>
-              <p className="flex items-center justify-center md:justify-start gap-2">
+              {/* <p className="flex items-center justify-center md:justify-start gap-2">
                 <Mail className="w-4 h-4" /> arunikapicture@gmail.com
-              </p>
+              </p> */}
             </div>
           </div>
 
@@ -29,12 +30,12 @@ export default function Footer() {
           <div className="space-y-4">
             <h3 className="font-medium text-gray-900">Ikuti Kami</h3>
             <div className="flex justify-center md:justify-start gap-5">
-              <a href="https://instagram.com/arunikapicture" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900 transition">
-                <Instagram className="w-5 h-5" />
+              <a href="https://instagram.com/arunikapicture_" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-500 transition transform hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(236,72,153,0.6)]">
+                <FaInstagram className="w-5 h-5" />
               </a>
 
-              <a href="#" className="text-gray-500 hover:text-gray-900 transition">
-                <Facebook className="w-5 h-5" />
+              <a href="https://www.tiktok.com/@arunika.picture" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-400 transition transform hover:scale-110 hover:drop-shadow-[0_0_6px_rgba(34,211,238,0.6)]">
+                <FaTiktok className="w-5 h-5" />
               </a>
             </div>
           </div>

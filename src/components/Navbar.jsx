@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import logoArunika from "../assets/img/123.png";
+import { Menu, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -41,15 +43,45 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden bg-white shadow-lg font-[Poppins]">
-          {menu.map((item) => (
-            <ScrollLink key={item} to={item.toLowerCase()} smooth duration={600} offset={-90} onClick={() => setOpen(false)} className="block px-6 py-4 border-b text-gray-700 hover:bg-amber-50 hover:text-amber-600 transition">
-              {item}
-            </ScrollLink>
-          ))}
-        </div>
-      )}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.35, ease: "easeInOut" }}
+            className="
+        md:hidden
+        bg-white/50
+        backdrop-blur-xl
+        border-t border-amber-100/60
+      "
+          >
+            {menu.map((item, i) => (
+              <motion.div key={item} initial={{ y: -6, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: i * 0.05 }}>
+                <ScrollLink
+                  to={item.toLowerCase()}
+                  smooth
+                  duration={600}
+                  offset={-90}
+                  onClick={() => setOpen(false)}
+                  className="
+              block px-6 py-5
+              font-[Poppins] text-base
+              text-gray-700
+              hover:bg-amber-50/50 hover:text-amber-600
+              transition
+              border-b border-amber-100/40
+              last:border-none
+            "
+                >
+                  {item}
+                </ScrollLink>
+              </motion.div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }
